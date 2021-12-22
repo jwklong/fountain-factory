@@ -13,7 +13,7 @@ class Tab {
 }
 
 function setTab(tab) {
-    if (currentTab !== tab) {
+    if (currentTab !== tab && tab.unlocked === true) {
         currentTab = tab
         document.getElementById("tab").innerHTML = currentTab["contains"]
     }
