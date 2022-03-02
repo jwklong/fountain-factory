@@ -1,15 +1,10 @@
-var something = ""
+let something = ""
 for (v in tabs) {
     something += "<h5 class='tabbutton' onclick='setTab(tabs[\"" + v + "\"])'>" + v + "</h5>"
 }
 document.getElementById("tabs").innerHTML = something
 
 setTab(tabs["Factory"])
-
-var game = {
-    factoryVersion: [0,0],
-    money: new e("0")
-}
 
 function saveGame(){
     try{
@@ -38,3 +33,7 @@ function loadGame(str)
     //initialise properties
     game.money = new e(game.money)
 }
+loadGame()
+setInterval(() => {
+    saveGame()
+}, 10000);

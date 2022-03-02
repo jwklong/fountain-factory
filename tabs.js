@@ -7,9 +7,6 @@ class Tab {
         this.contains = contains;
         this.unlocked = unlocked;
     }
-    isUnlocked() {
-        return this.unlocked
-    }
 }
 
 function setTab(tab) {
