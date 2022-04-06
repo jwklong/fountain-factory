@@ -1,13 +1,9 @@
 var game = {
     factoryVersion: [0,0],
-    money: new e("10")
-}
-
-setInterval(() => {
-    if (currentTab.name == "Factory") {
-        document.getElementById('moneycounter').innerHTML = "$" + game.money.toStringWithDecimalPlaces(4)
-    } if (currentTab.name == "Updater") {
-        document.getElementById('factoryversionmajor').innerHTML = game.factoryVersion[0]
-        document.getElementById('factoryversionminor').innerHTML = game.factoryVersion[1]
+    money: new e("10"),
+    upgrades: {
+        "mupg1": new MoneyUpgrade(new e("10"),
+        level => new e(new e("0.35").mul(level)).add(1),
+        level => new e("2").pow(level).eq("1") ? new e("0") : new e("2").pow(level).div("2")),
     }
-}, 1000/60);
+}

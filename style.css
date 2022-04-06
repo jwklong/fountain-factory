@@ -16,7 +16,15 @@ div *{
 }
 
 #moneycounter {
-    color: rgb(255, 255, 0);
+    color: rgb(255, 255, 100);
+}
+
+#factoryversionmajor {
+    color: rgb(100, 255, 175);
+}
+
+#factoryversionminor {
+    color: rgb(255, 100, 130);
 }
 
 .button{
